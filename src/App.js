@@ -8,6 +8,7 @@ function App() {
   const [dob, setDob] = useState("");
   const [mobiNo, setMobiNo] = useState("");
   const [education, setEducation] = useState("");
+  const [data, setData] = useState([]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -22,8 +23,36 @@ function App() {
       education,
     };
 
-    console.log(data);
+    fetch("http://localhost:5500/posts", {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    setName("");
+    setEmail("");
+    setEducation("");
+    setMobiNo("");
+    setDob("");
+    setId("");
+    alert("form submitted successfully 🎉");
   };
+
+  const fetchData = async () => {
+    await fetch("http://localhost:5500/posts")
+      .then((res) => res.json())
+      .then((db) => {
+        setData(db);
+        console.log(db);
+      });
+  };
+
+  const hanleFetchData = (e) => {
+    e.preventDefault();
+    fetchData();
+  };
+
   return (
     <div className="container">
       <form action="" onSubmit={handleSubmit}>
@@ -34,7 +63,7 @@ function App() {
             name="name"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            placeholder="Spider Man"
+            placeholder="Enter your name"
           />
         </div>
         <div className="input__group">
@@ -48,13 +77,13 @@ function App() {
           />
         </div>
         <div className="input__group">
-          <label htmlFor="idNumber">Id Number :</label>
+          <label htmlFor="empId">Id Number :</label>
           <input
             type="number"
             value={id}
             onChange={(e) => setId(e.target.value)}
-            name="idNumber"
-            placeholder="005"
+            name="empId"
+            placeholder="12545"
           />
         </div>
         <div className="input__group">
@@ -88,10 +117,20 @@ function App() {
           />
         </div>
         <div className="btn__group">
-          <input type="submit" value="Submit" />
-          <input type="submit" value="Fetch" />
+          <input className="btn" type="submit" value="Submit" />
         </div>
       </form>
+      <input
+        onClick={hanleFetchData}
+        className="btn"
+        type="submit"
+        value="Fetch"
+      />
+      {/* {data.map((item) => (
+        <div key={item.id}>
+          <h1>{item.name}</h1>
+        </div>
+      ))} */}
     </div>
   );
 }

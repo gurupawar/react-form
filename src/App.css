@@ -35,7 +35,7 @@ body {
   align-items: center;
 }
 
-.btn__group input {
+.btn {
   width: 100%;
   outline: none;
   border: 0;
@@ -45,7 +45,5 @@ body {
   font-weight: bold;
   border-radius: 3px;
   cursor: pointer;
-}
-.btn__group input + input {
-  margin-left: 1rem;
+  margin-top: 1rem;
 }
