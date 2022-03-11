@@ -6,28 +6,20 @@
       "author": "typicode"
     },
     {
-      "name": "Mrunal Jadhav",
-      "email": "mj@gmail.com",
-      "dob": "1/1/2001",
-      "mobiNo": "7720828736",
-      "education": "MSC IT",
+      "name": "iro",
+      "email": "iron@gmail.com",
+      "dob": "05/01/2000",
+      "mobiNo": "123456789",
+      "education": "MSc",
       "id": 2
     },
     {
-      "name": "Guru Pawar",
-      "email": "attitudsid@gmail.com",
-      "dob": "55/02/2012",
-      "mobiNo": "1234567890",
-      "education": "fsd",
+      "name": "wonsdf",
+      "email": "wonder@gmail.com",
+      "dob": "01/01/2001",
+      "mobiNo": "9988776655",
+      "education": "MSC",
       "id": 3
-    },
-    {
-      "name": "abcd",
-      "email": "abc@abc.gamil",
-      "dob": "02/01/1201",
-      "mobiNo": "1234567889",
-      "education": "MBBS",
-      "id": 4
     }
   ],
   "comments": [

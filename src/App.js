@@ -26,7 +26,7 @@ function App() {
       education,
     };
 
-    fetch("http://localhost:5500/posts", {
+    fetch("http://localhost:6200/posts", {
       method: "POST",
       body: JSON.stringify(data),
       headers: {
@@ -43,7 +43,7 @@ function App() {
   };
 
   const fetchData = async () => {
-    await fetch("http://localhost:5500/posts")
+    await fetch("http://localhost:6200/posts")
       .then((res) => res.json())
       .then((db) => {
         setData(db);
