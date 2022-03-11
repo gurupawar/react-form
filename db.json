@@ -1,0 +1,43 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "name": "Mrunal Jadhav",
+      "email": "mj@gmail.com",
+      "dob": "1/1/2001",
+      "mobiNo": "7720828736",
+      "education": "MSC IT",
+      "id": 2
+    },
+    {
+      "name": "Guru Pawar",
+      "email": "attitudsid@gmail.com",
+      "dob": "55/02/2012",
+      "mobiNo": "1234567890",
+      "education": "fsd",
+      "id": 3
+    },
+    {
+      "name": "abcd",
+      "email": "abc@abc.gamil",
+      "dob": "02/01/1201",
+      "mobiNo": "1234567889",
+      "education": "MBBS",
+      "id": 4
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
